@@ -1,0 +1,14 @@
+.material-icons {
+  &.control {
+    color: $color-font-main;
+    font-size: 3rem;
+    opacity: 0.7;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+      color: $color-bg-cells;
+    }
+  }
+}

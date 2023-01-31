@@ -1,0 +1,15 @@
+.sizes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 25px 0 15px;
+
+  &__btn {
+    text-align: center;
+
+    @media screen and (max-width: 480px) {
+      flex: 0 0 25%;
+    }
+  }
+}

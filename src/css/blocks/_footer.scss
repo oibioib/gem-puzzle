@@ -1,0 +1,38 @@
+.footer {
+  grid-area: footer;
+
+  &-links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+
+    span {
+      display: block;
+    }
+  }
+}
+
+.muted {
+  opacity: 0.3;
+  transition: 0.5s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.link {
+  &-github {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: url("../assets/github.svg") center center no-repeat;
+    background-size: 2.5rem 2.5rem;
+  }
+
+  &-rsschool {
+    width: 9rem;
+    height: 2.5rem;
+    background: url("../assets/rsschooljs.svg") center center no-repeat;
+  }
+}

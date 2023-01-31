@@ -1,0 +1,93 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+
+  @media screen and (max-width: 500px) {
+    font-size: 9px;
+  }
+
+  @media screen and (max-width: 380px) {
+    font-size: 8px;
+  }
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: $font-main;
+  color: $color-font-main;
+  background-image: linear-gradient($angle-main-gradient, $color-main-gradient-from, $color-main-gradient-to);
+}
+
+.container {
+  display: grid;
+  grid-template-rows: minmax(25px, 0.05fr) minmax(100px, 150px) 50px auto 1fr 40px;
+  grid-template-areas:
+    "header header"
+    "menu menu"
+    "timer moves"
+    "board board"
+    "sizes sizes"
+    "footer footer";
+  height: 100vh;
+  max-width: 452px;
+  margin: 0 auto;
+  padding: 0 20px;
+  justify-content: center;
+}
+
+.game {
+  &-menu {
+    grid-area: menu;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-size: 2rem;
+
+    @media screen and (max-width: 460px) {
+      font-size: 1.8rem;
+    }
+
+    div {
+      @media screen and (max-width: 360px) {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  }
+
+  &-board {
+    grid-area: board;
+    border-radius: 10px;
+    background-color: $color-bg-board;
+    justify-self: center;
+    touch-action: none;
+  }
+
+  &-timer {
+    grid-area: timer;
+    font-size: 2rem;
+  }
+
+  &-moves {
+    grid-area: moves;
+    display: flex;
+    justify-content: end;
+    font-size: 2rem;
+  }
+
+  &-sizes {
+    grid-area: sizes;
+  }
+}
+
+.drag {
+  cursor: move;
+}

@@ -1,0 +1,27 @@
+.btn {
+  background-color: $color-bg-board;
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition: 0.3s;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    color: #ffffff;
+    background-color: $color-bg-cells;
+  }
+
+  &.selected {
+    color: #ffffff;
+    background-color: $color-btn-selected;
+
+    &:hover {
+      cursor: default;
+    }
+  }
+
+  &_resume-game {
+    color: #ffffff;
+    background: $color-btn-selected;
+  }
+}
